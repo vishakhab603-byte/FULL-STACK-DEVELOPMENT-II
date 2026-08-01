@@ -1,0 +1,273 @@
+/* ==========================================================================
+   SYNAPSE X — Design Tokens
+   Three themes: Aurora (light, default), Midnight (dark), Synapse Neural (dark+violet)
+   ========================================================================== */
+
+:root {
+  /* Type */
+  --font-display: 'Space Grotesk', 'Segoe UI', sans-serif;
+  --font-body: 'Inter', 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Radii */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 30px;
+  --r-full: 999px;
+
+  /* Motion */
+  --ease-synapse: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 140ms;
+  --dur-med: 280ms;
+  --dur-slow: 480ms;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(15, 15, 35, 0.06);
+  --shadow-md: 0 8px 24px -8px rgba(15, 15, 35, 0.18);
+  --shadow-lg: 0 24px 60px -20px rgba(15, 15, 35, 0.35);
+  --shadow-glow: 0 0 0 1px var(--accent-ring), 0 0 40px -8px var(--accent-glow);
+}
+
+/* -------------------- Aurora (light, default) -------------------- */
+[data-theme='aurora'] {
+  --bg: #f6f5fb;
+  --bg-elevated: #ffffff;
+  --surface: #ffffffcc;
+  --surface-solid: #ffffff;
+  --surface-hover: #f0eefc;
+  --border: #e4e1f2;
+  --border-strong: #cfc9ea;
+
+  --text-primary: #17162b;
+  --text-secondary: #5a5677;
+  --text-tertiary: #9490ae;
+  --text-on-accent: #ffffff;
+
+  --accent: #6d4bff;
+  --accent-2: #00b8d9;
+  --accent-soft: #eee9ff;
+  --accent-ring: rgba(109, 75, 255, 0.35);
+  --accent-glow: rgba(109, 75, 255, 0.28);
+
+  --success: #12946f;
+  --success-soft: #e3f7ef;
+  --warning: #b7791f;
+  --warning-soft: #fdf1dc;
+  --danger: #d1385a;
+  --danger-soft: #fbe4ea;
+
+  --grad-hero: linear-gradient(135deg, #6d4bff 0%, #9a6bff 45%, #00b8d9 100%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(109,75,255,0.16), transparent 45%),
+               radial-gradient(circle at 85% 0%, rgba(0,184,217,0.14), transparent 40%),
+               radial-gradient(circle at 50% 100%, rgba(154,107,255,0.12), transparent 50%);
+  color-scheme: light;
+}
+
+/* -------------------- Midnight (dark) -------------------- */
+[data-theme='midnight'] {
+  --bg: #0e1016;
+  --bg-elevated: #14161f;
+  --surface: #171a25cc;
+  --surface-solid: #171a25;
+  --surface-hover: #1f2230;
+  --border: #262a3a;
+  --border-strong: #333850;
+
+  --text-primary: #f1f0f8;
+  --text-secondary: #a8a6c0;
+  --text-tertiary: #6d6a8a;
+  --text-on-accent: #ffffff;
+
+  --accent: #8a6bff;
+  --accent-2: #2fd8f5;
+  --accent-soft: #23203f;
+  --accent-ring: rgba(138, 107, 255, 0.4);
+  --accent-glow: rgba(138, 107, 255, 0.35);
+
+  --success: #3ddc9c;
+  --success-soft: #123329;
+  --warning: #f0b74d;
+  --warning-soft: #352a12;
+  --danger: #ff6b8b;
+  --danger-soft: #351621;
+
+  --grad-hero: linear-gradient(135deg, #4b2fd6 0%, #8a6bff 45%, #2fd8f5 100%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(138,107,255,0.20), transparent 45%),
+               radial-gradient(circle at 85% 0%, rgba(47,216,245,0.15), transparent 40%),
+               radial-gradient(circle at 50% 100%, rgba(138,107,255,0.12), transparent 50%);
+  color-scheme: dark;
+}
+
+/* -------------------- Synapse Neural (dark + violet, signature) -------------------- */
+[data-theme='synapse'] {
+  --bg: #08070f;
+  --bg-elevated: #0f0d1c;
+  --surface: #150f2acc;
+  --surface-solid: #150f2a;
+  --surface-hover: #1d1638;
+  --border: #2a2050;
+  --border-strong: #3c2d72;
+
+  --text-primary: #f4f0ff;
+  --text-secondary: #b3a6e6;
+  --text-tertiary: #766aa8;
+  --text-on-accent: #0a0714;
+
+  --accent: #b98bff;
+  --accent-2: #ff6bd6;
+  --accent-soft: #241a44;
+  --accent-ring: rgba(185, 139, 255, 0.45);
+  --accent-glow: rgba(255, 107, 214, 0.35);
+
+  --success: #5ff0b0;
+  --warning: #ffcf6b;
+  --danger: #ff6ba1;
+  --success-soft: #102a20;
+  --warning-soft: #332310;
+  --danger-soft: #33101f;
+
+  --grad-hero: linear-gradient(135deg, #6d2fd6 0%, #b98bff 40%, #ff6bd6 100%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(185,139,255,0.28), transparent 45%),
+               radial-gradient(circle at 85% 0%, rgba(255,107,214,0.18), transparent 40%),
+               radial-gradient(circle at 50% 100%, rgba(109,47,214,0.22), transparent 50%);
+  color-scheme: dark;
+}
+
+/* -------------------- Sakura (light, pastel) -------------------- */
+[data-theme='sakura'] {
+  --bg: #fff5f7;
+  --bg-elevated: #ffffff;
+  --surface: #ffffffd9;
+  --surface-solid: #ffffff;
+  --surface-hover: #ffe9f0;
+  --border: #f6d3e0;
+  --border-strong: #eeb3c9;
+
+  --text-primary: #3a2430;
+  --text-secondary: #8a6272;
+  --text-tertiary: #b993a5;
+  --text-on-accent: #ffffff;
+
+  --accent: #ff6fa5;
+  --accent-2: #7cc7ff;
+  --accent-soft: #ffe1ec;
+  --accent-ring: rgba(255, 111, 165, 0.35);
+  --accent-glow: rgba(255, 111, 165, 0.3);
+
+  --success: #2fa876;
+  --success-soft: #e2f7ee;
+  --warning: #c17f1f;
+  --warning-soft: #fdefdc;
+  --danger: #e0537a;
+  --danger-soft: #fde3ea;
+
+  --grad-hero: linear-gradient(135deg, #ff9fc6 0%, #ff6fa5 45%, #7cc7ff 100%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(255,111,165,0.18), transparent 45%),
+               radial-gradient(circle at 85% 0%, rgba(124,199,255,0.16), transparent 40%),
+               radial-gradient(circle at 50% 100%, rgba(255,159,198,0.16), transparent 50%);
+  color-scheme: light;
+}
+
+/* -------------------- Terminal (dark, hacker green) -------------------- */
+[data-theme='terminal'] {
+  --bg: #060a06;
+  --bg-elevated: #0a120a;
+  --surface: #0d160dcc;
+  --surface-solid: #0d160d;
+  --surface-hover: #142014;
+  --border: #1f3a1f;
+  --border-strong: #2c522c;
+
+  --text-primary: #baffc4;
+  --text-secondary: #6fcf7d;
+  --text-tertiary: #3f8a4a;
+  --text-on-accent: #06100a;
+
+  --accent: #39ff6a;
+  --accent-2: #9dff57;
+  --accent-soft: #113017;
+  --accent-ring: rgba(57, 255, 106, 0.4);
+  --accent-glow: rgba(57, 255, 106, 0.35);
+
+  --success: #39ff6a;
+  --warning: #e6ff4d;
+  --danger: #ff5c5c;
+  --success-soft: #0f2a15;
+  --warning-soft: #2a2c0c;
+  --danger-soft: #2c1010;
+
+  --grad-hero: linear-gradient(135deg, #0d3d1c 0%, #39ff6a 60%, #9dff57 100%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(57,255,106,0.14), transparent 45%),
+               radial-gradient(circle at 85% 0%, rgba(157,255,87,0.1), transparent 40%),
+               radial-gradient(circle at 50% 100%, rgba(57,255,106,0.08), transparent 50%);
+  color-scheme: dark;
+}
+
+/* -------------------- Sunset (dark, warm amber/coral) -------------------- */
+[data-theme='sunset'] {
+  --bg: #150a0d;
+  --bg-elevated: #1d0f13;
+  --surface: #24131acc;
+  --surface-solid: #24131a;
+  --surface-hover: #2e1a20;
+  --border: #3c2129;
+  --border-strong: #522c37;
+
+  --text-primary: #ffe9de;
+  --text-secondary: #d9a692;
+  --text-tertiary: #9a6f63;
+  --text-on-accent: #1a0a0a;
+
+  --accent: #ff7a4d;
+  --accent-2: #ffc04d;
+  --accent-soft: #3a1c14;
+  --accent-ring: rgba(255, 122, 77, 0.4);
+  --accent-glow: rgba(255, 122, 77, 0.35);
+
+  --success: #6fd88a;
+  --warning: #ffc04d;
+  --danger: #ff5f7e;
+  --success-soft: #163020;
+  --warning-soft: #332411;
+  --danger-soft: #331420;
+
+  --grad-hero: linear-gradient(135deg, #ff3d68 0%, #ff7a4d 50%, #ffc04d 100%);
+  --grad-mesh: radial-gradient(circle at 15% 20%, rgba(255,122,77,0.22), transparent 45%),
+               radial-gradient(circle at 85% 0%, rgba(255,192,77,0.16), transparent 40%),
+               radial-gradient(circle at 50% 100%, rgba(255,61,104,0.16), transparent 50%);
+  color-scheme: dark;
+}
+
+/* -------------------- Matrix (hidden — Konami code only) -------------------- */
+[data-theme='matrix'] {
+  --bg: #000000;
+  --bg-elevated: #030603;
+  --surface: #00110066;
+  --surface-solid: #030a03;
+  --surface-hover: #0a1a0a;
+  --border: #0e3d0e;
+  --border-strong: #146614;
+
+  --text-primary: #00ff41;
+  --text-secondary: #00cc34;
+  --text-tertiary: #037a1c;
+  --text-on-accent: #000000;
+
+  --accent: #00ff41;
+  --accent-2: #00ff9d;
+  --accent-soft: #06210a;
+  --accent-ring: rgba(0, 255, 65, 0.5);
+  --accent-glow: rgba(0, 255, 65, 0.45);
+
+  --success: #00ff41;
+  --warning: #baff00;
+  --danger: #ff2b4d;
+  --success-soft: #06210a;
+  --warning-soft: #1c2100;
+  --danger-soft: #2b0a10;
+
+  --grad-hero: linear-gradient(135deg, #002b0a 0%, #00ff41 60%, #00ff9d 100%);
+  --grad-mesh: radial-gradient(circle at 50% 0%, rgba(0,255,65,0.12), transparent 50%);
+  color-scheme: dark;
+}

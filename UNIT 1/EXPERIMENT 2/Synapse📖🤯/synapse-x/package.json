@@ -1,0 +1,33 @@
+{
+  "name": "synapse-x",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "SYNAPSE X — One Brain. Infinite State. A Redux Toolkit + Reselect showcase.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
+    "framer-motion": "^11.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.52.1",
+    "react-redux": "^9.1.2",
+    "react-router-dom": "^6.25.1",
+    "reselect": "^5.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.8",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jsdom": "^24.1.1",
+    "vite": "^5.3.4",
+    "vitest": "^2.0.4"
+  }
+}
