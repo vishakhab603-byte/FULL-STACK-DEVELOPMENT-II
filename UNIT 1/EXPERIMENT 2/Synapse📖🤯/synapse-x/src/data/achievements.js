@@ -1,8 +1,3 @@
-/* ==========================================================================
-   ACHIEVEMENT DEFINITIONS — pure data. Unlock conditions are checked by
-   the listener middleware; this file just describes what the badges are.
-   `secret: true` achievements show as "???" in the drawer until unlocked.
-   ========================================================================== */
 
 export const ACHIEVEMENTS = [
   {

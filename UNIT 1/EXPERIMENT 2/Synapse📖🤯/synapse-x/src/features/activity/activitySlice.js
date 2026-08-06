@@ -1,10 +1,5 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 
-/* ==========================================================================
-   ACTIVITY SLICE — a running timeline of everything that happened,
-   appended to by the listener middleware. Capped to avoid unbounded growth.
-   ========================================================================== */
-
 const MAX_ENTRIES = 200;
 
 const initialState = {

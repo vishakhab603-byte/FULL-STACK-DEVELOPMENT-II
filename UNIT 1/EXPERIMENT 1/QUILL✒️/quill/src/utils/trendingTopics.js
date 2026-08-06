@@ -1,6 +1,3 @@
-// Not a live trends feed — there's no API for that here. This is a curated
-// pool of evergreen conversation starters, rotated by date so the panel
-// feels fresh without ever pretending to be real-time trending data.
 
 const TOPIC_POOL = [
   "the tools you'd never give up",

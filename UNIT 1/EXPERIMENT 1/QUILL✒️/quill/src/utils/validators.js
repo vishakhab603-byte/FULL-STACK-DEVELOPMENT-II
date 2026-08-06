@@ -1,17 +1,10 @@
 import { getPlatform } from "./platformRules";
 
-/**
- * Extract hashtags from raw text (# followed by word chars, no leading digit-only run).
- */
 export function extractHashtags(text = "") {
   const matches = text.match(/#[a-zA-Z0-9_]+/g) || [];
   return [...new Set(matches.map((h) => h.toLowerCase()))];
 }
 
-/**
- * Effective length: URLs count as 23 chars on X-like platforms (t.co-style
- * shortening). We approximate any http(s):// token as 23 chars for X/Threads.
- */
 export function effectiveLength(text = "", platformId) {
   const urlRegex = /https?:\/\/\S+/g;
   const urls = text.match(urlRegex) || [];
@@ -22,10 +15,7 @@ export function effectiveLength(text = "", platformId) {
   return text.length;
 }
 
-/**
- * Validate a single post's text+media against one platform's rules.
- * Returns { errors: [], warnings: [], length, limit, hashtags }
- */
+
 export function validateForPlatform(text = "", mediaCount = 0, platformId, title = "") {
   const platform = getPlatform(platformId);
   const errors = [];

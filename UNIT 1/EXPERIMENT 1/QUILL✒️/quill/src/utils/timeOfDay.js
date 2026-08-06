@@ -1,5 +1,3 @@
-// Central "what moment is it" engine. Feeds the dynamic theme, the
-// composer's daily spark card, and best-time suggestions.
 
 export const PERIODS = {
   dawn: { label: "Dawn", emoji: "🌅", range: [5, 8] },
@@ -26,8 +24,6 @@ const DAY_PERSONALITY = {
   6: { name: "Saturday", vibe: "casual browsing mode — visual and low-effort content wins" },
 };
 
-// A short, evergreen list of widely-known observances. Deliberately generic
-// and non-exhaustive — this is a playful nudge, not a claim of completeness.
 const NOTABLE_DAYS = {
   "01-01": "New Year's Day — reflection and fresh-start posts resonate",
   "02-14": "Valentine's Day — warmth and connection themes land well",

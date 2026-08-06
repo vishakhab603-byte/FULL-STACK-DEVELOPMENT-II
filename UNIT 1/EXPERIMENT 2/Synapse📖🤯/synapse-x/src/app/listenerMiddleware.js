@@ -16,16 +16,9 @@ import { draftAutosaved } from '../features/drafts/draftsSlice';
 import { saveState } from '../utils/localStorage';
 import { unlockAchievementThunk } from './achievementHelpers';
 
-/* ==========================================================================
-   LISTENER MIDDLEWARE — "the nervous system"
-   Chains reactions to domain events without slices needing to know about
-   each other: Post Created -> Notification -> Activity Log -> Persist.
-   Also doubles as the achievement-tracking system's nerve endings.
-   ========================================================================== */
 
 export const listenerMiddleware = createListenerMiddleware();
 
-// Session-only counters (deliberately not persisted — "in a single session")
 let postsCreatedThisSession = 0;
 const themesVisitedThisSession = new Set();
 

@@ -22,7 +22,7 @@ export async function playPublishChime(enabled) {
     s.triggerAttackRelease("E5", "16n", now + 0.08);
     s.triggerAttackRelease("G5", "8n", now + 0.16);
   } catch {
-    // audio can fail silently (autoplay policies etc.) — never block the UI on it
+
   }
 }
 

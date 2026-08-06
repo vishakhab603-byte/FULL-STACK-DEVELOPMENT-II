@@ -1,10 +1,5 @@
 import { recordAction } from '../services/perfTracker';
 
-/* ==========================================================================
-   CUSTOM MIDDLEWARE
-   ========================================================================== */
-
-/** Times every action and forwards the measurement to the perf tracker singleton. */
 export const performanceMiddleware = () => (next) => (action) => {
   const start = performance.now();
   const result = next(action);
@@ -13,7 +8,6 @@ export const performanceMiddleware = () => (next) => (action) => {
   return result;
 };
 
-/** Readable console grouping for every dispatched action — dev-time visibility. */
 export const loggerMiddleware = () => (next) => (action) => {
   const start = performance.now();
   const result = next(action);
@@ -27,7 +21,6 @@ export const loggerMiddleware = () => (next) => (action) => {
   return result;
 };
 
-/** Counts domain-relevant actions for lightweight in-session analytics. */
 const analyticsCounts = {};
 export const analyticsMiddleware = () => (next) => (action) => {
   if (action.type.startsWith('posts/') || action.type.startsWith('drafts/')) {

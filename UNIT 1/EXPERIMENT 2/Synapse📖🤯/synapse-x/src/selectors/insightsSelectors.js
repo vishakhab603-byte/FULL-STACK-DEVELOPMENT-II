@@ -2,10 +2,6 @@ import { createSelector } from 'reselect';
 import { selectTopPlatform } from '../features/platforms/platformsSelectors';
 import { selectDraftCompletionPercentage, selectGrowthMetrics, selectContentStats } from '../features/posts/postsSelectors';
 
-/* ==========================================================================
-   INSIGHTS — plain-language observations synthesized entirely from
-   memoized selector output. No AI API calls; this is derived state.
-   ========================================================================== */
 
 export const selectInsights = createSelector(
   selectTopPlatform,

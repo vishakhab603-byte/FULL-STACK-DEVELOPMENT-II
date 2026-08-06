@@ -1,9 +1,5 @@
 import { makeId } from '../utils/id';
 
-/* ==========================================================================
-   MOCK API — simulates a real backend: latency, occasional failures,
-   and a persistent-for-the-session in-memory "database".
-   ========================================================================== */
 
 const LATENCY_RANGE = [280, 900];
 const FAILURE_RATE = 0.08; // 8% of requests randomly fail, to exercise error/retry paths

@@ -1,5 +1,3 @@
-// Intentionally undocumented outside this file. Something occasionally
-// happens when you publish. That's all this comment is going to say about it.
 
 const FLAVOR = [
   "🌟 Something's different about this one.",

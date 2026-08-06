@@ -1,7 +1,7 @@
 import { getPlatform } from "./platformRules";
 
 const DAY_MODIFIER = {
-  // 0=Sun..6=Sat — light rule-of-thumb weighting, not real data.
+  
   0: 0.85,
   1: 1.05,
   2: 1.1,
@@ -17,10 +17,7 @@ function formatHour(h) {
   return `${hour12}${period}`;
 }
 
-/**
- * Given a platform and a reference date, suggest the next best send window
- * today (or tomorrow if today's windows have passed), plus a short reason.
- */
+
 export function bestTimeToPost(platformId, now = new Date()) {
   const platform = getPlatform(platformId);
   if (!platform) return null;

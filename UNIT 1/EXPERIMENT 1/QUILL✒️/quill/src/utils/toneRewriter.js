@@ -1,11 +1,6 @@
 import { getPlatform } from "./platformRules";
 
-/**
- * Rule-based "tone rewrite". This is intentionally mechanical — it's a
- * stand-in for real judgment. See callClaude() at the bottom for how to
- * replace this with an actual model call that can genuinely reason about
- * voice instead of pattern-matching.
- */
+
 export function ruleBasedRewrite(text, platformId) {
   const platform = getPlatform(platformId);
   if (!platform || !text.trim()) return text;

@@ -1,10 +1,6 @@
 import { createSlice, createEntityAdapter, createAsyncThunk, nanoid } from '@reduxjs/toolkit';
 import { mockApi } from '../../services/mockApi';
 
-/* ==========================================================================
-   POSTS SLICE — normalized entity state ({ ids: [], entities: {} })
-   Async CRUD via createAsyncThunk, with optimistic update + rollback.
-   ========================================================================== */
 
 export const postsAdapter = createEntityAdapter({
   sortComparer: (a, b) => new Date(b.createdAt) - new Date(a.createdAt)

@@ -1,9 +1,6 @@
 import { useEffect } from 'react';
 
-/**
- * Registers a global keyboard shortcut.
- * combo example: 'mod+k' (mod = Cmd on Mac, Ctrl elsewhere), 'mod+shift+l'
- */
+
 export function useKeyboardShortcut(combo, handler, deps = []) {
   useEffect(() => {
     const parts = combo.toLowerCase().split('+');
@@ -27,6 +24,5 @@ export function useKeyboardShortcut(combo, handler, deps = []) {
 
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, deps);
 }

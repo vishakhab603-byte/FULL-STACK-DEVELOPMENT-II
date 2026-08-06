@@ -14,10 +14,6 @@ import { listenerMiddleware } from './listenerMiddleware';
 import { persistenceMiddleware } from './persistenceMiddleware';
 import { loggerMiddleware, performanceMiddleware, analyticsMiddleware } from './middleware';
 
-/* ==========================================================================
-   STORE — "the brain". Every slice below is a decision center; the
-   listener middleware is the nervous system connecting them.
-   ========================================================================== */
 
 export const store = configureStore({
   reducer: {

@@ -3,9 +3,6 @@ import { postsAdapter } from './postsSlice';
 import { countWords, countCharacters, readingTimeSeconds } from '../../utils/text';
 import { isToday, isWithinDays } from '../../utils/date';
 
-/* ==========================================================================
-   POSTS SELECTORS — every derived value is computed, never stored.
-   ========================================================================== */
 
 const adapterSelectors = postsAdapter.getSelectors((state) => state.posts);
 

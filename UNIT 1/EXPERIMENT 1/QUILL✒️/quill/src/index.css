@@ -1,11 +1,3 @@
-/* ============================================================
-   MUSE — design tokens
-   Concept: a well-loved desk of stationery. Paper white surface,
-   deep ink navy type, marker-yellow highlights, a highlighter-pink
-   accent reserved for the Muse's own voice, postmark-style stamps
-   for platform badges. Fraunces carries personality in headings,
-   Inter runs the interface, JetBrains Mono reports the numbers.
-   ============================================================ */
 
 :root {
   --radius-sm: 8px;
@@ -29,13 +21,7 @@
   --coral-soft: #ffe4e1;
 }
 
-/* ============================================================
-   Dynamic theme — the whole desk shifts mood with the clock.
-   data-period is set by ThemeManager: dawn / day / dusk / night.
-   "Auto" mode follows real time; Light pins to day, Dark pins to night.
-   ============================================================ */
 
-/* DAY — bright, energetic, the default working palette */
 :root, [data-period="day"] {
   --paper: #fbfaf5;
   --paper-dim: #f2f0e6;
@@ -103,13 +89,6 @@ body {
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-/* ============================================================
-   Skins — optional static looks you can pin regardless of time
-   of day. Selected in Settings. "classic" (no data-skin set)
-   leaves the dynamic dawn/day/dusk/night system in charge.
-   These are declared after the period blocks above, so for equal
-   selector specificity they win the cascade whenever active.
-   ============================================================ */
 
 /* SEPIA — warm typewriter paper, ink-stained and a little literary */
 [data-skin="sepia"] {

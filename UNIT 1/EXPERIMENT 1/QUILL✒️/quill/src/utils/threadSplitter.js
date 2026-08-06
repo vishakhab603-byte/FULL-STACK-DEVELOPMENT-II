@@ -1,11 +1,7 @@
 import { getPlatform } from "./platformRules";
 import { effectiveLength } from "./validators";
 
-/**
- * Splits long text into numbered thread parts that each fit the platform's
- * character limit, breaking on sentence boundaries where possible, falling
- * back to word boundaries. Reserves room for a " 3/7" style suffix.
- */
+
 export function splitIntoThread(text, platformId) {
   const platform = getPlatform(platformId);
   if (!platform || !text.trim()) return [text];

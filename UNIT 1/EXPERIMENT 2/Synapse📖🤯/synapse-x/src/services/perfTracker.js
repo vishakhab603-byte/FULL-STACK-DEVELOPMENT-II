@@ -1,10 +1,4 @@
-/* ==========================================================================
-   PERF TRACKER — a plain-JS singleton (deliberately outside Redux) that
-   records per-action timing. Keeping it out of the store means measuring
-   dispatches never triggers more dispatches (no feedback loops), and
-   consumers can poll it on their own cadence instead of re-rendering the
-   whole app on every single action.
-   ========================================================================== */
+
 
 const MAX_HISTORY = 50;
 

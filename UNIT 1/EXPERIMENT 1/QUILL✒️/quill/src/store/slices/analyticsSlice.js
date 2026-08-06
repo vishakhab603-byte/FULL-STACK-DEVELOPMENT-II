@@ -1,8 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { PLATFORM_LIST } from "../../utils/platformRules";
 
-// deterministic-ish pseudo-random generator seeded per day so numbers don't
-// jump around on every reload, but still look "alive".
+
 function seededRandom(seed) {
   let x = Math.sin(seed) * 10000;
   return x - Math.floor(x);

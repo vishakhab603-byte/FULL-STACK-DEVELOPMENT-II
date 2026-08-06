@@ -11,11 +11,6 @@ import {
 } from '../features/posts/postsSelectors';
 import { selectAllPlatforms } from '../features/platforms/platformsSelectors';
 
-/* ==========================================================================
-   DASHBOARD SUMMARY — a single memoized selector combining many slices.
-   Only recomputes when one of its inputs actually changes.
-   ========================================================================== */
-
 export const selectDashboardSummary = createSelector(
   selectAllPosts,
   selectPublishedPosts,

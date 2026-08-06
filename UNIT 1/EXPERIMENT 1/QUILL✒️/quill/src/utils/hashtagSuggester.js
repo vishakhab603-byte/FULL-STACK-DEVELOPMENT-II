@@ -9,11 +9,7 @@ const STOPWORDS = new Set(
     .split(" ")
 );
 
-/**
- * Very lightweight keyword extraction: strips stopwords/punctuation, counts
- * frequency, favours longer + capitalized-looking words (proper nouns, brand
- * names, feature words), and turns the top candidates into hashtag casing.
- */
+
 export function suggestHashtags(text = "", limit = 6) {
   const existing = new Set((text.match(/#[a-zA-Z0-9_]+/g) || []).map((h) => h.slice(1).toLowerCase()));
 

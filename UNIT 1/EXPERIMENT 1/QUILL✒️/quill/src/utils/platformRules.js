@@ -1,7 +1,3 @@
-// Single source of truth for what each platform allows.
-// Everything downstream (validators, thread splitter, Muse suggestions,
-// best-time heuristics) reads from this file so adding a platform is a
-// one-place edit.
 
 export const PLATFORMS = {
   x: {

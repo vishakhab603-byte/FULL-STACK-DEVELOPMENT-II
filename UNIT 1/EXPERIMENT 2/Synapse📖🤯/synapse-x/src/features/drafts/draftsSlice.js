@@ -1,11 +1,6 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit';
 import { loadState } from '../../utils/localStorage';
 
-/* ==========================================================================
-   DRAFTS SLICE — autosave + version history for the post editor.
-   Persisted to localStorage by the persistence middleware.
-   ========================================================================== */
-
 const persisted = loadState('drafts');
 
 const initialState = persisted || {

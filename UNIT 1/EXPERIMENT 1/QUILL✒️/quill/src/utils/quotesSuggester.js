@@ -1,6 +1,4 @@
-// Short (<15 word), safely quotable lines from public-domain authors, plus
-// original micro-lines written fresh for this app (credited to "the Muse",
-// not to any real poet) — we never reproduce copyrighted verse.
+
 
 const PUBLIC_DOMAIN_QUOTES = [
   { text: "Simplicity is the ultimate sophistication.", author: "Leonardo da Vinci" },

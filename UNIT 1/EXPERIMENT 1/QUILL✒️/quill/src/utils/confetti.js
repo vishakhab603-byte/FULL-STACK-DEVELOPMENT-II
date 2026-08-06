@@ -1,10 +1,7 @@
 const COLORS = ["#ffc53d", "#ff3d80", "#00c48c", "#2f7de1", "#ff5a4e", "#14213d"];
 const GOLD_COLORS = ["#ffd700", "#ffe9a8", "#fff4d6", "#f0c14b", "#ffffff"];
 
-/**
- * Fires a burst of DOM confetti pieces, self-cleaning after they finish
- * falling. No canvas, no deps — just absolutely-positioned divs.
- */
+
 export function fireConfetti(count = 60, palette = COLORS) {
   const container = document.createElement("div");
   container.style.position = "fixed";
