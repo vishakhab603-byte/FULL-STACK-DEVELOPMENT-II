@@ -1,38 +1,30 @@
 # KAIROS
 
-A gamified time/task management React app — calendar, scheduler, "content pipeline"
-board, XP/leveling system, achievements, mini "render performance" simulator/labs,
-command palette, notifications, and multiple visual themes ("Cosmic", "Rain",
-"Aurora", "Zen", "Cyber", "Sunset", "Storm").
-
-Rebuilt from a single self-contained HTML prototype (React + Babel loaded via CDN,
-JSX compiled in-browser) into a standard Vite project structure.
-
-## Run it
-
-```bash
-npm install
-npm run dev
-```
-
-Then open the printed local URL (usually http://localhost:5173).
-
-## Build for production
-
-```bash
-npm run build
-npm run preview
-```
+A full React app (Vite) — every "slice" and component broken out into its own file.
 
 ## Structure
 
 ```
-index.html          Vite entry HTML
-src/main.jsx         React root / mount point
-src/App.jsx          All app logic and components (single file, as in the original)
-src/index.css        All styling (themes, animations, layout)
+src/
+  main.jsx              # entry point, mounts <App/>
+  App.jsx                # root component, page router
+  index.css              # all global styles (design tokens, animations, layout)
+  components/
+    pages/                # one file per routed page (Calendar, SchedulerDuel, WeekRenderMonitor, etc.)
+    layout/               # Sidebar
+    shared/               # reusable UI pieces (Avatar, Logo, ToastStack, particle effects, etc.)
+    Login.jsx, OpeningSequence.jsx
+  state/                  # store hooks: useEventStore, useContentStore, useActivityTracker
+  hooks/                  # useTicker, useNotifications
+  data/                   # seed data & constants (themes, achievements, nav sections, etc.)
+  lib/                    # pure helper functions (scheduling, tests, chrono, audio, etc.)
 ```
 
-Everything from the original prototype — components, hooks, mock API layer,
-scoring/XP logic, themes, and the render-performance "labs" — is preserved as-is;
-only the module wrapper changed (CDN + in-browser Babel → npm + Vite build).
+## Run it
+
+```
+npm install
+npm run dev
+```
+
+Then open the printed local URL. `npm run build` produces a production build in `dist/`.
